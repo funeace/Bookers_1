@@ -15,14 +15,15 @@
  */
 
 
-/*
+/* メモ
 文字サイズの指定方法
   px: ピクセル指定;
   % : パーセント指定;
   em: X割指定（0.5em => 50%,1em => 100%);
 */
 
-/*共通部分*/
+
+/*アプリケーション内で共通なもの*/
 body {
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
@@ -39,7 +40,24 @@ a:visited {
   color: #808080;
 }
 
-/*個別設定*/
+tr {
+  padding-bottom: 5px;
+}
+
+td {
+  padding: 0 5px 5px 5px;
+}
+
+label {
+  display:block;
+}
+
+.flash {
+  color:#008000;
+  margin: 35px;
+}
+
+/*各画面固有のもの*/
 .top_h1{
   margin-bottom:30px;
 }
@@ -58,12 +76,8 @@ a:visited {
   margin-right: 0.5em;
 }
 
-.index_table th{
-  text-align:center;
-}
-
-.new_post {
-  margin-bottom:5px;
+.new_content {
+  margin-bottom: 10px;
 }
 
 .show_p {
@@ -71,22 +85,34 @@ a:visited {
   margin-bottom:30px;
 }
 
-.flash {
-  color:#008000;
+.edit_content {
+  margin-bottom: 10px;
 }
 
+
+/*エラーメッセージの処理*/
 .error_messages {
   width: 450px;
+  height: 120px;
   border: 2px solid red;
-  padding: 7px;
   padding-bottom: 0;
   margin-bottom: 20px;
   background-color: #f0f0f0;
 }
 
-.error_messages h2{
+.error_head {
+  background-color:red;
+  color:#fff;
+  padding:5px 15px;
+  font-weight: bold;
+
 }
 
+.error_body {
+  margin: 30px;
+}
+
+/*エラーが出ると勝手に作られる(エラー文の周りに赤枠つける)*/
 .field_with_errors {
   padding: 2px;
   background-color: red;
